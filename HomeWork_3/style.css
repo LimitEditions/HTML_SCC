@@ -27,6 +27,10 @@ img {
   display: block;
 }
 
+header{
+  padding: 45px 0 89px 0;
+}
+
 .contener {
   max-width: 1170px;
   margin: 0 auto;
@@ -47,6 +51,12 @@ img {
   width: 533px;
 }
 
+.interval-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .firstMenu {
   color: #f25822;
   font-family: Gilroy-SemiBold;
@@ -57,11 +67,20 @@ img {
   font-family: Gilroy-Medium;
 }
 
+.content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 41px;
+  margin-bottom: 259px;
+}
+
 .mainHeader {
   color: #000;
   font-family: Gilroy-Bold;
   font-size: 60px;
   font-weight: 400;
+  margin-bottom: 17px;
 }
 
 .paragraf {
@@ -70,11 +89,14 @@ img {
   font-size: 20px;
   font-weight: 400;
   width: 466px;
+  margin-bottom: 52px;
 }
 
 .btn{
   max-width: 302px;
-  gap: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-border {
@@ -86,12 +108,14 @@ img {
   border-radius: 50px;
   background: #f25822;
   box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.2);
-
 }
 
 .btn-unborder {
   color: #aaa;
+  width: 90px;
+  height: 19px;
   font-family: Gilroy-Bold;
+  flex-shrink: 0;
   font-size: 15px;
   font-weight: 400;
   text-decoration: none;
@@ -110,4 +134,9 @@ img {
   width: 160px;
   height: 50px;
   flex-shrink: 0;
+}
+
+.interval-footer{
+  display: flex;
+  justify-content: space-between;
 }
