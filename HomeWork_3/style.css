@@ -151,8 +151,7 @@ header {
 }
 
 .icon {
-  margin-top: 100px;
-  margin-right: 60px;
+  margin: 100px 60px 100px 0;
   width: 370px;
   height: 291px;
   padding: 40px 30px 25px 30px;
@@ -181,10 +180,6 @@ header {
   background-color: white;
 }
 
-.under__header {
-  margin-top: 192px;
-}
-
 .shadow{
   box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
 }
@@ -199,6 +194,8 @@ header {
   background-color: #f25822;
   border-radius: 50px;
   border: none;
+  margin-bottom: 50px;
+  margin-top: 39px;
 }
 
 .second__container {
@@ -206,7 +203,6 @@ header {
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  height: 549px;
   background: #FAFAFA;
 }
 
@@ -215,20 +211,22 @@ header {
   font-family: Gilroy-Bold;
   font-size: 45px;
   margin-bottom: 19px;
+  margin-top: 92px;
 }
 
 .second__container p {
   color: #666;
   font-family: Gilroy-Regular;
   line-height: 150%;
-  margin-bottom: 55px;
 }
 
 .study__menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   gap: 30px;
-  padding: 0 30px 50px 30px;
+  padding: 50px 30px;
+  background: #FFF;
+  text-align: center;
+  align-items: center;
 }
 
 .study-menu__content {
@@ -239,6 +237,9 @@ header {
 
 .study-menu__content p {
   color: #aaa;
-  text-align: center;
   font-size: 15px;
+}
+
+.shadowImg {
+  box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.10);
 }
