@@ -200,12 +200,12 @@ header {
 
 .background{
   background: #FAFAFA;
+  padding-bottom: 100px;
 }
 .second__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
 }
 
 .under__header {
@@ -229,9 +229,12 @@ header {
   display: flex;
   gap: 30px;
   padding: 50px 30px;
-  background: #FFF;
   text-align: center;
   align-items: center;
+}
+
+.img{
+  background: #FFF;
 }
 
 .study-menu__content {
