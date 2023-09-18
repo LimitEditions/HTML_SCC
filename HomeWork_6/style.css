@@ -19,7 +19,7 @@ img {
 }
 
 .contener {
-  min-width: 1600px;
+  max-width: 1600px;
 }
 
 .header__style {
@@ -30,11 +30,21 @@ img {
   gap: 859px;
 }
 
+.header {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .logo {
   display: flex;
   width: 111px;
-  margin-left: 230px;
   justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .button {
@@ -48,6 +58,8 @@ img {
   width: 159px;
   height: 29px;
   justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .main__style {
@@ -107,7 +119,7 @@ nav {
   position: relative;
 }
 
-.nav__ImgLarge{
+.nav__ImgLarge {
   position: relative;
 }
 
@@ -120,7 +132,7 @@ nav {
 .nav__Text {
   position: absolute;
   top: 105px;
-  left: 125px;
+  left: 103px;
   width: 154px;
   color: #fff;
   text-align: center;
@@ -135,47 +147,52 @@ nav {
   width: 160px;
 }
 
-.heading {
+.heading h3 {
   font-size: 30px;
   text-align: center;
   flex-direction: column;
-  & p {
-    color: #9f9f9f;
-    font-size: 14px;
-    margin-top: 6px;
-    margin-bottom: 48px;
-  }
+  font-weight: 400;
+}
+
+.heading p {
+  color: #9f9f9f;
+  font-size: 14px;
+  margin-top: 6px;
 }
 
 .column {
   flex-direction: column;
+  gap: 48px;
 }
 
 .card {
+
   width: 360px;
   gap: 30px;
+  background: #f8f8f8;
 }
 
 .text__Card {
-  font-size: 13px;
-  background: #f8f8f8;
-  padding-top: 25px;
-  & h3 {
+  gap: 16px;
+  padding: 24px 16px;
+}
+.text__Card h4 {
+    font-size: 13px;
+    background: #f8f8f8;
+  }
+.text__Card h3 {
     margin: 16px 0;
     color: #5d5d5d;
     font-size: 14px;
     width: 315px;
     font-weight: 300;
   }
-  & p {
+.text__Card p {
     color: #f16d7f;
     font-size: 16px;
-    padding-bottom: 20px;
   }
-}
 
 .btn {
-  margin-top: 48px;
   margin-bottom: 60px;
   width: 212px;
   height: 48px;
@@ -189,7 +206,7 @@ nav {
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .contener {
-    min-width: 768px;
+    max-width: 768px;
   }
 
   .header__style {
@@ -197,8 +214,15 @@ nav {
     gap: 424px;
   }
 
+  .header{
+    max-width: 736px;
+    padding: 19px 32px;
+  }
+
   .logo {
     margin-left: 32px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .navigation {
@@ -254,7 +278,7 @@ nav {
     width: 232px;
     height: 167px;
   }
-  
+
   .background__Img {
     position: absolute;
     top: 0;
@@ -273,12 +297,10 @@ nav {
     left: 287px;
   }
 
-  .heading {
-    & p {
+  .heading p {
       margin-top: 3px;
       margin-bottom: 72px;
     }
-  }
 
   .column {
     flex-direction: column;
@@ -288,14 +310,12 @@ nav {
     gap: 16px;
   }
 
-  .text__Card {
-    & h3 {
-      margin: 12px 0;
-    }
+  .text__Card h3 {
+    margin: 12px 0;
   }
 
   .btn {
     margin-top: 32px;
-    margin-bottom: 65px;
+    margin-bottom: 70px;
   }
 }
