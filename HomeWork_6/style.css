@@ -18,6 +18,14 @@ img {
   display: block;
 }
 
+a{
+  margin: 0;
+}
+
+button{
+  margin: 0;
+}
+
 .contener {
   max-width: 1600px;
 }
@@ -88,10 +96,10 @@ img {
   font-weight: 700;
 }
 
-.span__Color {
+.span-ColorTop {
   color: #f16d7f;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 main {
@@ -140,6 +148,11 @@ nav {
   font-weight: 400;
 }
 
+.span__Color{
+  font-size: 24px;
+  color: #f16d7f;
+}
+
 .large {
   position: absolute;
   top: 65px;
@@ -166,7 +179,6 @@ nav {
 }
 
 .card {
-
   width: 360px;
   gap: 30px;
   background: #f8f8f8;
@@ -223,6 +235,10 @@ nav {
     margin-left: 32px;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .span-ColorTop{
+    font-size: 24px;
   }
 
   .navigation {
@@ -317,5 +333,125 @@ nav {
   .btn {
     margin-top: 32px;
     margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contener {
+    max-width: 375px;
+  }
+  
+  .header__style {
+    height: 74px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header {
+    padding: 16px 18px;
+    margin: 0;
+  }
+  
+  .logo {
+    display: flex;
+    width: 111px;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .button {
+    background: none;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .navigation {
+    display: flex;
+    width: 32px;
+    height: 23px;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hiden{
+    display: none;
+  }
+  
+  .span-ColorTop{
+    font-size: 20px;
+  }
+
+  .main__style {
+    height: 363px;
+  }
+  
+  .main__Text {
+    width: 263px;
+    padding-left: 15px;
+  }
+  
+  .main__Text h2 {
+    font-size: 38px;
+  }
+  
+  .main__Text h3 {
+    font-size: 20px;
+  }
+  
+  .span__Color {
+    font-size: 24px;
+  }
+  
+  .second__container {
+    width: 359px;
+    gap: 16px;
+  }
+
+  nav {
+    margin: 64px auto;
+  }
+
+  .nav__Img img {
+    width: 343px;
+    height: 248px;
+  }
+
+  .nav__ImgLarge img{
+    width: 343px;
+     height: 111px;
+  }
+  
+  .large {
+    top: 30px;
+    left: 92px;
+  }
+  
+  .heading p {
+    margin-top: 3px;
+  }
+  
+  .column {
+    gap: 41px;
+  }
+  
+  .card {
+    margin-top: 24px;
+    width: 359px;
+    gap: 16px;
+  }
+  
+  .text__Card {
+    padding: 25px 28px 20px 17px;
+  }
+
+  .text__Card h3 {
+      margin-top: 13px;
+      margin-bottom: 18px;
+    }
+  
+  .btn {
+    margin-bottom: 85px;
   }
 }
