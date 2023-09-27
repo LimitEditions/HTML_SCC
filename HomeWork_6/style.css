@@ -87,9 +87,19 @@ img {
   height: 764px;
   background: #f1e4e6;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   margin-bottom: 65px;
+  position: relative;
+  gap: 63px;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.main__Div {
+  margin-top: 290px;
 }
 
 .main__Text {
@@ -115,8 +125,59 @@ img {
   font-size: 32px;
 }
 
-main {
-  justify-content: center;
+ul {
+  list-style-type: none;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 11px;
+  color: #6f6e6e;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  width: 232px;
+  height: 634px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: -6px 8px 15px 0px #dddada;
+}
+
+.menu-active {
+  width: 126px;
+  margin-left: 32px;
+  margin-top: 32px;
+  position: relative;
+}
+
+.menu-g {
+  margin-bottom: 20px;
+}
+
+.menu-text {
+  color: #f16d7f;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.menu-heading {
+  font-size: 14px;
+  margin-bottom: 24px;
 }
 
 .second__container {
@@ -184,7 +245,7 @@ main {
 
 .column {
   flex-direction: column;
-  gap: 48px;
+  gap: 45px;
 }
 
 .card {
@@ -224,7 +285,6 @@ main {
 }
 
 .text__Card {
-  gap: 16px;
   padding: 24px 16px;
 }
 .text__Card h4 {
@@ -232,7 +292,8 @@ main {
   background: #f8f8f8;
 }
 .text__Card h3 {
-  margin: 16px 0;
+  margin-top: 12px;
+  margin-bottom: 18px;
   color: #5d5d5d;
   font-size: 14px;
   width: 315px;
@@ -244,7 +305,7 @@ main {
 }
 
 .btn {
-  margin-bottom: 60px;
+  margin-bottom: 93px;
   width: 212px;
   height: 48px;
   border: 1px solid #ff6a6a;
@@ -258,7 +319,7 @@ main {
 }
 
 .btn:hover {
-  background-color: #F16D7F;
+  background-color: #f16d7f;
   color: white;
 }
 
@@ -295,14 +356,11 @@ main {
   height: 448px;
   background-image: url(img/fone.jpg);
   background-size: cover;
-  lighting-color: 0px -169px;
   position: relative;
 }
 
 .subscribe {
-  justify-content: flex-end;
   padding-top: 97px;
-  padding-bottom: 126px;
   gap: 223px;
 }
 
@@ -315,34 +373,32 @@ main {
   gap: 30px;
 }
 
-.subscribe__photo h4{
+.subscribe__photo h4 {
   height: 99px;
-    font-size: 20px;
-    font-weight: 400;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .submit {
   width: 557px;
-  height: 142px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   font-size: 24px;
-  line-height: 167.2%;
 }
 
+.submit h3 {
+  font-size: 24px;
+}
 .submit h4 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 32px;
-line-height: 153.2%;
+  line-height: 153.2%;
 }
 
 .form {
   width: 356px;
   display: flex;
+  margin: 0 auto;
 }
 
 .input {
@@ -401,13 +457,12 @@ line-height: 153.2%;
 }
 
 .sites__logo:hover {
-  background: #F16D7F;
+  background: #f16d7f;
 }
 
-.sites__logo:hover path{
-fill: #FFFFFF;
+.sites__logo:hover path {
+  fill: #ffffff;
 }
-
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .contener {
@@ -467,6 +522,36 @@ fill: #FFFFFF;
 
   main {
     justify-content: center;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .menu {
+    height: 425px;
+  }
+
+  .menu-active {
+    margin-left: 22px;
+    margin-top: 5px;
+  }
+
+  .menu-g {
+    margin-bottom: 5px;
+  }
+
+  .menu-text {
+    margin-bottom: 5px;
+  }
+
+  .menu-heading {
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 
   nav {
@@ -529,7 +614,7 @@ fill: #FFFFFF;
     margin-bottom: 70px;
   }
 
-  .order-style{
+  .order-style {
     height: 610px;
   }
 
@@ -537,9 +622,9 @@ fill: #FFFFFF;
     padding-top: 64px;
   }
 
-  .subscribe-style{
+  .subscribe-style {
     height: 693px;
-    background-image: url(./img/fone_table.png)
+    background-image: url(./img/fone_table.png);
   }
 }
 
@@ -569,7 +654,7 @@ fill: #FFFFFF;
     display: none;
   }
 
-  .count{
+  .count {
     display: none;
   }
 
@@ -579,6 +664,10 @@ fill: #FFFFFF;
 
   .main__style {
     height: 363px;
+  }
+
+  .main__Div {
+    margin: 0 auto;
   }
 
   .main__Text {
@@ -597,10 +686,41 @@ fill: #FFFFFF;
   .span__Color {
     font-size: 24px;
   }
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .menu {
+    width: 152px;
+    height: 425px;
+  }
+
+  .menu-active {
+    margin-left: 22px;
+    margin-top: 5px;
+  }
+
+  .menu-g {
+    margin-bottom: 5px;
+  }
+
+  .menu-text {
+    margin-bottom: 5px;
+  }
+
+  .menu-heading {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 
   .second__container {
     width: 343px;
     gap: 16px;
+    justify-content: center;
   }
 
   nav {
@@ -647,7 +767,7 @@ fill: #FFFFFF;
     margin-bottom: 96px;
   }
 
-  .order-style{
+  .order-style {
     height: 610px;
   }
 
@@ -661,23 +781,31 @@ fill: #FFFFFF;
     padding-top: 64px;
   }
 
-  .subscribe-style{
+  .subscribe-style {
     height: 550px;
     background-image: url(./img/fone-mobile.png);
   }
 
-  .subscribe__photo img{
+  .subscribe__photo img {
     width: 92px;
-  height: 92px;
+    height: 92px;
   }
 
-  .subscribe__photo h4{
+  .subscribe__photo h4 {
     font-size: 18px;
     height: 73px;
   }
 
-  .submit h4{
+  .submit {
+    height: 123px;
+  }
+
+  .submit h4 {
     font-size: 14px;
+  }
+
+  .form {
+    width: 341px;
   }
 
   .footer-style {
@@ -687,8 +815,9 @@ fill: #FFFFFF;
     padding-bottom: 9px;
   }
 
-  .footer-style__reverse{
+  .footer-style__reverse {
     display: flex;
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 }
