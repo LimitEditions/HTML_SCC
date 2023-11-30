@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Open+Sans:wght@600;800&display=swap");
+
+@import 'vars';
+@import 'mixins';
+
 * {
   padding: 0;
   margin: 0;
@@ -18,12 +22,12 @@ img {
 }
 
 .contener {
-  max-width: 1600px;
+  max-width: $contener;
   margin: 0 auto;
 }
 
 .header__style {
-  background: #222;
+  background: $colorBlack;
   height: 75px;
   display: flex;
   align-items: center;
@@ -32,20 +36,12 @@ img {
 
 .header {
   width: 1140px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include flex(flex, space-between, center, auto, auto);
 }
 
 .logo {
   width: 111px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-left: 0;
-  margin-right: 0;
+  @include flex(flex, space-between, baseline, 0, 0);
 }
 
 .button {
@@ -60,28 +56,20 @@ img {
   width: 169px;
   height: 37px;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-left: 0;
-  margin-right: 0;
+  @include flex(flex, space-between, flex-end, 0, 0);
 }
 
 .count {
   width: 19px;
   height: 19px;
   border-radius: 50px;
-  background-color: #f16d7f;
-  color: #ffffff;
+  background-color: $colorPink;
+  color: $colorWhite;
   font-size: 12px;
   position: absolute;
   right: -10px;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include flex(flex, center, center, auto, auto);
 }
 
 .main__style {
@@ -105,25 +93,22 @@ img {
 
 .main__Text {
   width: 405px;
-  border-left: 12px solid #f16d7f;
-  color: #222;
+  border-left: 12px solid $colorPink;
+  color: $colorBlack;
   padding-left: 16px;
 }
 
 .main__Text h2 {
-  font-size: 48px;
-  font-weight: 900;
+  @include font (48px, 900);
 }
 
 .main__Text h3 {
-  font-size: 32px;
-  font-weight: 700;
+  @include font (32px, 700);
 }
 
 .span-ColorTop {
-  color: #f16d7f;
-  font-size: 32px;
-  font-weight: 700;
+  color: $colorPink;
+  @include font (32px, 700);
 }
 
 ul {
@@ -147,7 +132,7 @@ li {
   position: absolute;
   top: 0;
   right: 0;
-  background: #ffffff;
+  background: $colorWhite;
   box-shadow: -6px 8px 15px 0px #dddada;
 }
 
@@ -163,9 +148,8 @@ li {
 }
 
 .menu-text {
-  color: #f16d7f;
-  font-size: 14px;
-  font-weight: 400;
+  color: $colorPink;
+  @include font (14px, 400);
   margin-bottom: 12px;
 }
 
@@ -182,15 +166,11 @@ li {
 }
 
 .second__container {
-  width: 1140px;
+  width: $secondContener;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include flex(flex, space-between, center, auto, auto);
 }
 
 .nav__Img {
@@ -212,15 +192,14 @@ li {
   top: 105px;
   left: 103px;
   width: 154px;
-  color: #ffffff;
+  color: $colorWhite;
   text-align: center;
-  font-size: 16px;
-  font-weight: 400;
+  @include font(16px, 400);
 }
 
 .span__Color {
   font-size: 24px;
-  color: #f16d7f;
+  color: $colorPink;
 }
 
 .large {
@@ -231,8 +210,7 @@ li {
 }
 
 .heading h3 {
-  font-size: 30px;
-  font-weight: 400;
+  @include font(30px, 400);
   text-align: center;
   flex-direction: column;
   margin-top: 96px;
@@ -270,18 +248,14 @@ li {
 .button-hover {
   width: 139px;
   height: 44px;
-  color: #ffffff;
+  color: $colorWhite;
   position: absolute;
   top: 188px;
   left: 110px;
   background: none;
-  border: 1px solid #ffffff;
+  border: 1px solid $colorWhite;
   cursor: pointer;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include flex(flex, space-evenly, center, auto, auto);
 }
 
 .card__hover {
@@ -301,12 +275,11 @@ li {
   margin-bottom: 18px;
   color: #5d5d5d;
   width: 315px;
-  font-size: 14px;
-  font-weight: 300;
+  @include font(14px, 300);
 }
 
 .text__Card p {
-  color: #f16d7f;
+  color: $colorPink;
   font-size: 16px;
 }
 
@@ -319,20 +292,16 @@ li {
   background: none;
   color: #f26376;
   font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include flex(flex, center, center, auto, auto);
 }
 
 .btn:hover {
-  background-color: #f16d7f;
-  color: #ffffff;
+  background-color: $colorPink;
+  color: $colorWhite;
 }
 
 .order-style {
-  background: #222;
+  background: $colorBlack;
   height: 341px;
   display: flex;
   align-items: center;
@@ -347,16 +316,15 @@ li {
 }
 
 .order h4 {
-  color: #ffffff;
+  color: $colorWhite;
   font-size: 20px;
   margin-top: 25px;
   margin-bottom: 16px;
 }
 
 .order p {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 300;
+  color: $colorWhite;
+  @include font(14px, 300);
   display: flex;
   text-align: center;
 }
@@ -384,8 +352,7 @@ li {
 
 .subscribe__photo h4 {
   height: 99px;
-  font-size: 20px;
-  font-weight: 400;
+  @include font(20px, 400);
 }
 
 .submit {
@@ -399,8 +366,7 @@ li {
 }
 
 .submit h4 {
-  font-size: 18px;
-  font-weight: 400;
+  @include font(18px, 400);
   margin-bottom: 32px;
   line-height: 153.2%;
 }
@@ -427,24 +393,23 @@ li {
 
 .submit-button {
   width: 100px;
-  background: #f16d7f;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 400;
+  background: $colorPink;
+  color: $colorWhite;
+  @include font(14px, 400);
   border-radius: 0 30px 30px 0;
   cursor: pointer;
 }
 
 .footer-style {
   height: 79px;
-  background: #222;
+  background: $colorBlack;
   display: flex;
   align-items: center;
 }
 
 .footer-style__paragraf {
   padding-left: 5px;
-  color: #ffffff;
+  color: $colorWhite;
 }
 
 .sites {
@@ -457,224 +422,241 @@ li {
 .sites__logo {
   width: 32px;
   height: 32px;
-  background-color: #ffffff;
+  background-color: $colorWhite;
   justify-items: center;
-  border: 1px solid #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  border: 1px solid $colorBlack;
+  @include flex(flex, center, center, auto, auto);
 }
 
 .sites__logo:hover {
-  background: #f16d7f;
+  background: $colorPink;
 }
 
 .sites__logo:hover path {
-  fill: #ffffff;
+  fill: $colorWhite;
 }
 
 .nav-style {
   display: flex;
   height: 148px;
   background: #F8F3F4;
-}
-.nav-style__content {
-  width: 1140px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-.nav-style__text {
-  color: #f16d7f;
-  font-size: 24px;
-  font-weight: 400;
-}
-.nav-style__breadCrumbs-link {
-  color: #636363;
-  font-size: 14px;
-  font-weight: 300;
-}
-.nav-style__breadCrumbs-link:not(:last-child)::after {
-  content: "/";
-  padding-left: 6px;
-  padding-right: 6px;
-}
-.nav-style__breadCrumbs-link:last-child {
-  color: #f16d7f;
-  font-size: 14px;
-  font-weight: 700;
+
+  &__content {
+    width: $secondContener;
+    @include flex(flex, space-between, center, auto, auto);
+  }
+
+  &__text {
+    color: $colorPink;
+    @include font(24px, 400);
+  }
+
+  &__breadCrumbs-link {
+    color: #636363;
+    @include font(14px, 300);
+
+  }
+
+  &__breadCrumbs-link:not(:last-child)::after {
+    content: '/';
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  &__breadCrumbs-link:last-child {
+    color: $colorPink;
+
+    @include font(14px, 700);
+  }
 }
 
 .product {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include flex(flex, space-between, center, auto, auto);
   background-color: #F7F7F7;
-}
-.product__pointer {
-  background-color: rgba(42, 42, 42, 0.15);
-  width: 47px;
-  height: 47px;
-  padding: 8px;
-}
-.product__img {
-  margin-top: 11px;
-  margin-bottom: 42px;
-}
-.product__pointer:hover path {
-  fill: #f16d7f;
+
+  &__pointer {
+    background-color: rgba(42, 42, 42, 0.15);
+    width: 47px;
+    height: 47px;
+    padding: 8px;
+  }
+
+  &__img {
+    margin-top: 11px;
+    margin-bottom: 42px;
+  }
+
+  &__pointer:hover path {
+    fill: $colorPink;
+  }
 }
 
 .choose {
   min-height: 600px;
-  width: 1140px;
-  background-color: #ffffff;
+  width: $secondContener;
+  background-color: $colorWhite;
   flex-direction: column;
   margin-top: -65px;
   margin-bottom: 130px;
   padding-top: 65px;
   border: 1px solid #EAEAEA;
+  ;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-.choose__heading {
-  color: #f16d7f;
-  font-size: 14px;
-  font-weight: 300;
-}
-.choose__div {
-  height: 3px;
-  width: 63px;
-  background-color: #EF5B70;
-  margin: 12px;
-}
-.choose__subHeading {
-  color: #4D4D4D;
-  font-size: 18px;
-  font-weight: 300;
-}
-.choose__desc {
-  max-width: 555px;
-  color: #5E5E5E;
-  font-size: 14px;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 49px;
-  margin-bottom: 32px;
-}
-.choose__prise {
-  color: #EF5B70;
-  font-size: 24px;
-  font-weight: 300;
-}
-.choose__div2 {
-  margin-top: 65px;
-  margin-bottom: 65px;
-  width: 641px;
-  height: 2px;
-  background-color: #EAEAEA;
-}
-.choose__details {
-  display: flex;
-  gap: 23px;
-  margin-bottom: 48px;
-  cursor: pointer;
-}
-.choose__details-content {
-  display: flex;
-  gap: 9px;
-  color: #6F6E6E;
-  font-size: 14px;
-  font-weight: 400;
-}
-.choose__btn {
-  gap: 23px;
-  margin-bottom: 64px;
-}
-.choose__btn:hover svg path {
-  fill: #ffffff;
+  @include flex(flex, center, center, auto, auto);
+
+  &__heading {
+    color: $colorPink;
+    @include font(14px, 300);
+  }
+
+  &__div {
+    height: 3px;
+    width: 63px;
+    background-color: #EF5B70;
+    margin: 12px;
+  }
+
+  &__subHeading {
+    color: #4D4D4D;
+    @include font(18px, 300);
+  }
+
+  &__desc {
+    max-width: 555px;
+    color: #5E5E5E;
+    @include font(14px, 300);
+    text-align: center;
+    margin-top: 49px;
+    margin-bottom: 32px;
+  }
+
+  &__prise {
+    color: #EF5B70;
+    @include font(24px, 300);
+  }
+
+  &__div2 {
+    margin-top: 65px;
+    margin-bottom: 65px;
+    width: 641px;
+    height: 2px;
+    background-color: #EAEAEA;
+  }
+
+  &__details {
+    display: flex;
+    gap: 23px;
+    margin-bottom: 48px;
+    cursor: pointer;
+  }
+
+  &__details-content {
+    display: flex;
+    gap: 9px;
+    color: #6F6E6E;
+    @include font(14px, 400);
+  }
+
+  &__btn {
+    gap: 23px;
+    margin-bottom: 64px;
+  }
+
+  &__btn:hover svg path {
+    fill: $colorWhite;
+  }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .contener {
     max-width: 768px;
   }
+
   .header__style {
     height: 74px;
     gap: 424px;
   }
+
   .header {
     max-width: 736px;
     padding: 19px 32px;
   }
+
   .logo {
     margin-left: 32px;
     margin-left: 0;
     margin-right: 0;
   }
+
   .span-ColorTop {
     font-size: 24px;
   }
+
   .navigation {
     width: 169px;
     height: 37px;
   }
+
   .main__Image {
     width: 386px;
     margin: 0;
   }
+
   .main__style {
     height: 367px;
     gap: 39px;
   }
+
   .main__Text {
     width: 311px;
   }
+
   .main__Text h2 {
     font-size: 44px;
   }
+
   .main__Text h3 {
     font-size: 24px;
   }
+
   main {
     justify-content: center;
   }
+
   ul {
     padding-left: 15px;
   }
+
   li {
     margin-bottom: 5px;
   }
+
   .menu {
     height: 425px;
   }
+
   .menu-active {
     margin-left: 22px;
     margin-top: 5px;
   }
+
   .menu-g {
     margin-bottom: 5px;
   }
+
   .menu-text {
     margin-bottom: 5px;
   }
+
   .menu-heading {
     font-size: 14px;
     margin-bottom: 10px;
   }
+
   nav {
     margin-bottom: 110px;
   }
+
   .second__container {
     width: 736px;
     gap: 16px;
@@ -682,203 +664,256 @@ li {
     margin-left: auto;
     margin-right: auto;
   }
+
   .nav__Img {
     position: relative;
     margin: 0;
     width: 232px;
     height: 167px;
   }
+
   .background__Img {
     position: absolute;
     top: 0;
     left: 0;
   }
+
   .nav__Text {
     position: absolute;
     top: 59px;
     left: 39px;
   }
+
   .large {
     position: absolute;
     top: 33px;
     left: 287px;
   }
+
   .heading p {
     margin-top: 3px;
     margin-bottom: 72px;
   }
+
   .order-column {
     gap: 48px;
     flex-direction: column;
   }
+
   .card {
     gap: 16px;
   }
+
   .text__Card h3 {
     margin: 12px 0;
   }
+
   .btn {
     margin-top: 32px;
     margin-bottom: 70px;
   }
+
   .order-style {
     height: 610px;
   }
+
   .subscribe {
     padding-top: 64px;
   }
+
   .subscribe-style {
     height: 693px;
     background-image: url(./img/fone_table.png);
   }
 }
+
 @media (max-width: 767px) {
   .contener {
     max-width: 375px;
   }
+
   .header__style {
     height: 74px;
   }
+
   .header {
     padding: 16px 18px;
   }
+
   .logo {
     width: 111px;
   }
+
   .navigation {
     width: 32px;
     height: 23px;
   }
+
   .hiden {
     display: none;
   }
+
   .count {
     display: none;
   }
+
   .span-ColorTop {
     font-size: 20px;
   }
+
   .main__style {
     height: 363px;
   }
+
   .main__Text {
     width: 263px;
     padding-left: 15px;
   }
+
   .main__Text h2 {
     font-size: 38px;
   }
+
   .main__Text h3 {
     font-size: 20px;
   }
+
   .span__Color {
     font-size: 24px;
   }
+
   ul {
     padding-left: 15px;
   }
+
   li {
     margin-bottom: 5px;
   }
+
   .menu {
     width: 152px;
     height: 425px;
   }
+
   .menu-active {
     margin-left: 22px;
     margin-top: 5px;
   }
+
   .menu-g {
     margin-bottom: 5px;
   }
+
   .menu-text {
     margin-bottom: 5px;
   }
+
   .menu-heading {
     font-size: 14px;
     margin-bottom: 10px;
   }
+
   .second__container {
     width: 343px;
     gap: 16px;
     justify-content: center;
   }
+
   nav {
     margin: 64px auto;
   }
+
   .nav__Img img {
     height: 248px;
   }
+
   .nav__ImgLarge img {
     height: 111px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
+
   .large {
     top: 30px;
     left: 92px;
   }
+
   .heading p {
     margin-top: 3px;
   }
+
   .column {
     gap: 41px;
   }
+
   .card {
     width: 359px;
     gap: 16px;
   }
+
   .text__Card {
     padding: 25px 28px 20px 17px;
   }
+
   .text__Card h3 {
     margin-top: 13px;
     margin-bottom: 18px;
   }
+
   .btn {
     margin-bottom: 96px;
   }
+
   .order-style {
     height: 610px;
   }
+
   .order-column {
     gap: 46px;
     flex-direction: column;
     flex-wrap: nowrap;
   }
+
   .subscribe {
     padding-top: 64px;
   }
+
   .subscribe-style {
     height: 550px;
     background-image: url(./img/fone-mobile.png);
   }
+
   .subscribe__photo img {
     width: 92px;
     height: 92px;
   }
+
   .subscribe__photo h4 {
     font-size: 18px;
     height: 73px;
   }
+
   .submit {
     height: 123px;
   }
+
   .submit h4 {
     font-size: 14px;
   }
+
   .form {
     width: 341px;
   }
+
   .footer-style {
     height: 143px;
     display: flex;
     align-items: flex-end;
     padding-bottom: 9px;
   }
+
   .footer-style__reverse {
     display: flex;
     flex-direction: column-reverse;
     gap: 40px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
