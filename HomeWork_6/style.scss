@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Open+Sans:wght@600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import 'vars';
 @import 'mixins';
@@ -9,6 +10,14 @@
   border: 0;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 body {
@@ -229,7 +238,6 @@ li {
 
 .card {
   width: 360px;
-  margin-bottom: 128px;
   background: #f8f8f8;
   position: relative;
 }
@@ -267,7 +275,7 @@ li {
 }
 
 .text__Card h4 {
-  font-size: 13px;
+  @include font(13px, 400);
 }
 
 .text__Card h3 {
@@ -280,10 +288,11 @@ li {
 
 .text__Card p {
   color: $colorPink;
-  font-size: 16px;
+  @include font(16px, 400);
 }
 
 .btn {
+  margin-top: 128px;
   margin-bottom: 93px;
   width: 212px;
   height: 48px;
@@ -317,9 +326,9 @@ li {
 
 .order h4 {
   color: $colorWhite;
-  font-size: 20px;
   margin-top: 25px;
   margin-bottom: 16px;
+  @include font(20px, 400);
 }
 
 .order p {
@@ -435,6 +444,8 @@ li {
 .sites__logo:hover path {
   fill: $colorWhite;
 }
+
+// product
 
 .nav-style {
   display: flex;
@@ -566,6 +577,170 @@ li {
     fill: $colorWhite;
   }
 }
+
+// catalog
+.filter-sort {
+  height: 132px;
+  box-sizing: border-box;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.filter {
+  width: 360px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+
+  &__details {
+    display: flex;
+    position: relative;
+  }
+
+  &[open] {
+    background: $colorWhite;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    // margin-top: 39px;
+    z-index: 1;
+    padding: 17px;
+    position: absolute;
+    top: -15px;
+  }
+
+  &__heading {
+    color: #6F6E6E;
+    @include font(14px, 600);
+  }
+
+
+
+  &[open] .filter__heading {
+    color: $colorPink;
+  }
+
+  &[open] .filter__text {
+    margin-bottom: 16px;
+  }
+
+  &[open] path {
+    fill: $colorPink;
+  }
+
+  &__text {
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  &__link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    display: flex;
+    color: #6F6E6E;
+    margin-left: 11px;
+    @include font(14px, 400);
+    cursor: pointer;
+
+    &:hover {
+      color: $colorPink;
+    }
+  }
+
+  &__head {
+    @include font(14px, 400);
+    height: 37px;
+    border-left: 5px solid $colorPink;
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 16px;
+    padding-left: 11px;
+    display: flex;
+    align-items: center;
+    color: #6F6E6E;
+  }
+
+  &__filter:last-child .filter__head {
+    margin-bottom: 0;
+  }
+
+  &__item[open] .filter__head {
+    color: $colorPink;
+  }
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 28px;
+  position: absolute;
+  left: 440px;
+  cursor: pointer;
+
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6F6E6E;
+    @include font (14px, 400);
+  }
+
+  &__details[open] .sort__box {
+    width: 79px;
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    background-color: $colorWhite;
+    position: absolute;
+    top: 22px;
+    z-index: 1;
+  }
+
+  &__check {
+    margin: 9px;
+    color: #6F6E6E;
+    font-family: Roboto;
+    @include font (14px, 400);
+  }
+}
+
+.card_catalog {
+  margin-bottom: 0;
+}
+
+.rounder {
+  width: 283px;
+  padding: 15px 16px;
+  border: 1px solid #EBEBEB;
+  margin-top: 49px;
+  margin-bottom: 96px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  &__box {
+    color: #C4C4C4;
+    @include font(16px, 300);
+    display: flex;
+    gap: 15px;
+  }
+
+  &__svg:hover path{
+    fill: $colorPink;
+  }
+
+  &__number:hover{
+    color: $colorPink;
+  }
+
+}
+
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .contener {
