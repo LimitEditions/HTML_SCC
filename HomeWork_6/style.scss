@@ -302,6 +302,17 @@ li {
   color: #f26376;
   font-size: 16px;
   @include flex(flex, center, center, auto, auto);
+
+  &_reg {
+    width: 167px;
+    height: 50px;
+    background-color: $colorPink;
+    color: $colorWhite;
+    display: flex;
+    gap: 20px;
+    @include font(14px, 400);
+    margin: 39px 0 96px;
+  }
 }
 
 .btn:hover {
@@ -738,7 +749,6 @@ li {
   &__number:hover {
     color: $colorPink;
   }
-
 }
 
 // cart
@@ -800,12 +810,12 @@ li {
     cursor: pointer;
   }
 
-  &__close:hover{
+  &__close:hover {
     box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
   }
 
-  &__choose{
-    margin-top:  72px;
+  &__choose {
+    margin-top: 72px;
     display: flex;
     gap: 192px;
   }
@@ -827,8 +837,9 @@ li {
     height: 45px;
     width: 360px;
     padding: 13px auto 16px 17px;
-    color: $colorBlack;
+    color: #B1B1B1;
     padding-left: 17px;
+    @include font(13px, 300);
     cursor: pointer;
   }
 
@@ -916,6 +927,82 @@ li {
 
 #select-colortext {
   color: #B1B1B1;
+}
+
+// registration
+
+.registration {
+  margin-top: 64px;
+  display: flex;
+  gap: 128px;
+
+  &__name {
+    color: $colorBlack;
+    @include font(16px, 300);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 21px;
+  }
+
+  &__gender {
+    display: flex;
+    align-items: center;
+    width: 132px;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  #female {
+    margin-left: 10px;
+  }
+
+  &__gender input {
+    height: 17px;
+  }
+
+  &__gender label {
+    color: $colorBlack;
+    @include font(11px, 300);
+  }
+
+
+  &__example {
+    color: #B1B1B1;
+    @include font(13px, 300);
+  }
+}
+
+.btn_reg:hover {
+  background-color: $colorWhite;
+  color: $colorPink;
+}
+
+.btn_reg:hover path {
+  fill: $colorPink;
+}
+
+.loyal {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  &__heading {
+    color: $colorBlack;
+    @include font(24px, 300);
+  }
+
+  &__li {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include font(24px, 300);
+    list-style-image: url('./img/check_mark.svg');
+    padding-left: 23px;
+  }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -1074,7 +1161,7 @@ li {
 
   .subscribe-style {
     height: 693px;
-    background-image: url(./img/fone_table.png);
+    background-image: url(./img/check_mark.svg);
   }
 }
 

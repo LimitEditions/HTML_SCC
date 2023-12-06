@@ -336,6 +336,17 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
+.btn_reg {
+  width: 167px;
+  height: 50px;
+  background-color: #f16d7f;
+  color: #ffffff;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 39px 0 96px;
+}
 
 .btn:hover {
   background-color: #f16d7f;
@@ -836,8 +847,10 @@ li {
   height: 45px;
   width: 360px;
   padding: 13px auto 16px 17px;
-  color: #222;
+  color: #B1B1B1;
   padding-left: 17px;
+  font-size: 13px;
+  font-weight: 300;
   cursor: pointer;
 }
 .order__heading {
@@ -915,6 +928,75 @@ li {
 
 #select-colortext {
   color: #B1B1B1;
+}
+
+.registration {
+  margin-top: 64px;
+  display: flex;
+  gap: 128px;
+}
+.registration__name {
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+}
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  margin-bottom: 21px;
+}
+.registration__gender {
+  display: flex;
+  align-items: center;
+  width: 132px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.registration #female {
+  margin-left: 10px;
+}
+.registration__gender input {
+  height: 17px;
+}
+.registration__gender label {
+  color: #222;
+  font-size: 11px;
+  font-weight: 300;
+}
+.registration__example {
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.btn_reg:hover {
+  background-color: #ffffff;
+  color: #f16d7f;
+}
+
+.btn_reg:hover path {
+  fill: #f16d7f;
+}
+
+.loyal {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.loyal__heading {
+  color: #222;
+  font-size: 24px;
+  font-weight: 300;
+}
+.loyal__li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 300;
+  list-style-image: url("./img/check_mark.svg");
+  padding-left: 23px;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -1041,7 +1123,7 @@ li {
   }
   .subscribe-style {
     height: 693px;
-    background-image: url(./img/fone_table.png);
+    background-image: url(./img/check_mark.svg);
   }
 }
 @media (max-width: 767px) {
