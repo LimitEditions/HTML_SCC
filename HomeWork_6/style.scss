@@ -327,7 +327,7 @@ li {
   align-items: center;
 }
 
-.order {
+.order-content {
   width: 360px;
   display: flex;
   flex-direction: column;
@@ -342,7 +342,7 @@ li {
   }
 }
 
-.order h4 {
+.order-content h4 {
   color: $colorWhite;
   margin-top: 25px;
   margin-bottom: 16px;
@@ -1098,7 +1098,6 @@ li {
   .second__container {
     width: 736px;
     gap: 16px;
-    margin: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1128,6 +1127,10 @@ li {
     left: 287px;
   }
 
+  .heading h3{
+    margin-top: 155px;
+  }
+
   .heading p {
     margin-top: 3px;
     margin-bottom: 72px;
@@ -1155,13 +1158,8 @@ li {
     height: 610px;
   }
 
-  .subscribe {
-    padding-top: 64px;
-  }
-
-  .subscribe-style {
+  .subscribe-style{
     height: 693px;
-    background-image: url(./img/check_mark.svg);
   }
 }
 
