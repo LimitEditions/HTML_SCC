@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Open+Sans:wght@600;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-@import 'vars';
-@import 'mixins';
+@import "vars";
+@import "mixins";
 
 * {
   padding: 0;
@@ -108,16 +108,16 @@ img {
 }
 
 .main__Text h2 {
-  @include font (48px, 900);
+  @include font(48px, 900);
 }
 
 .main__Text h3 {
-  @include font (32px, 700);
+  @include font(32px, 700);
 }
 
 .span-ColorTop {
   color: $colorPink;
-  @include font (32px, 700);
+  @include font(32px, 700);
 }
 
 .menu-list {
@@ -158,7 +158,7 @@ img {
 
 .menu-text {
   color: $colorPink;
-  @include font (14px, 400);
+  @include font(14px, 400);
   margin-bottom: 12px;
 }
 
@@ -423,8 +423,7 @@ img {
 .footer-style {
   height: 79px;
   background: $colorBlack;
-  display: flex;
-  align-items: center;
+  @include flex(flex, space-between, center, auto, auto);
   padding: 0 24px;
 }
 
@@ -461,7 +460,7 @@ img {
 .nav-style {
   display: flex;
   height: 148px;
-  background: #F8F3F4;
+  background: #f8f3f4;
 
   &__content {
     width: $secondContener;
@@ -476,11 +475,10 @@ img {
   &__breadCrumbs-link {
     color: #636363;
     @include font(14px, 300);
-
   }
 
   &__breadCrumbs-link:not(:last-child)::after {
-    content: '/';
+    content: "/";
     padding-left: 6px;
     padding-right: 6px;
   }
@@ -494,7 +492,7 @@ img {
 
 .product {
   @include flex(flex, space-between, center, auto, auto);
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 
   &__pointer {
     background-color: rgba(42, 42, 42, 0.15);
@@ -514,16 +512,17 @@ img {
 }
 
 .choose {
-  min-height: 600px;
+  height: 600px;
   background-color: $colorWhite;
   flex-direction: column;
   margin-top: -65px;
   margin-bottom: 130px;
   padding-top: 65px;
-  border: 1px solid #EAEAEA;
-  ;
+  border: 1px solid #eaeaea;
   position: relative;
-  @include flex(flex, center, center, auto, auto);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0px;
 
   &__heading {
     color: $colorPink;
@@ -533,18 +532,18 @@ img {
   &__div {
     height: 3px;
     width: 63px;
-    background-color: #EF5B70;
+    background-color: #ef5b70;
     margin: 12px;
   }
 
   &__subHeading {
-    color: #4D4D4D;
+    color: #4d4d4d;
     @include font(18px, 300);
   }
 
   &__desc {
     max-width: 555px;
-    color: #5E5E5E;
+    color: #5e5e5e;
     @include font(14px, 300);
     text-align: center;
     margin-top: 49px;
@@ -552,7 +551,7 @@ img {
   }
 
   &__prise {
-    color: #EF5B70;
+    color: #ef5b70;
     @include font(24px, 300);
   }
 
@@ -561,26 +560,26 @@ img {
     margin-bottom: 65px;
     width: 641px;
     height: 2px;
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
   }
 
   &__details {
     display: flex;
     gap: 23px;
-    margin-bottom: 48px;
     cursor: pointer;
   }
 
   &__details-content {
     display: flex;
     gap: 9px;
-    color: #6F6E6E;
+    color: #6f6e6e;
     @include font(14px, 400);
   }
 
   &__btn {
     gap: 23px;
     margin-bottom: 64px;
+    margin-top: 48px;
   }
 
   &__btn:hover svg path {
@@ -602,7 +601,6 @@ img {
   box-sizing: border-box;
   cursor: pointer;
 
-
   &__details {
     display: flex;
     position: relative;
@@ -619,11 +617,9 @@ img {
   }
 
   &__heading {
-    color: #6F6E6E;
+    color: #6f6e6e;
     @include font(14px, 600);
   }
-
-
 
   &[open] .filter__heading {
     color: $colorPink;
@@ -654,7 +650,7 @@ img {
 
   &__link {
     display: flex;
-    color: #6F6E6E;
+    color: #6f6e6e;
     margin-left: 11px;
     @include font(14px, 400);
     cursor: pointer;
@@ -668,12 +664,12 @@ img {
     @include font(14px, 400);
     height: 37px;
     border-left: 5px solid $colorPink;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid #ebebeb;
     margin-bottom: 16px;
     padding-left: 11px;
     display: flex;
     align-items: center;
-    color: #6F6E6E;
+    color: #6f6e6e;
   }
 
   &__filter:last-child .filter__head {
@@ -694,13 +690,12 @@ img {
   left: 440px;
   cursor: pointer;
 
-
   &__content {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #6F6E6E;
-    @include font (14px, 400);
+    color: #6f6e6e;
+    @include font(14px, 400);
   }
 
   &__details[open] .sort__box {
@@ -714,9 +709,9 @@ img {
 
   &__check {
     margin: 9px;
-    color: #6F6E6E;
+    color: #6f6e6e;
     font-family: Roboto;
-    @include font (14px, 400);
+    @include font(14px, 400);
   }
 }
 
@@ -727,7 +722,7 @@ img {
 .rounder {
   width: 283px;
   padding: 15px 16px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   margin-top: 49px;
   margin-bottom: 96px;
   display: flex;
@@ -735,7 +730,7 @@ img {
   justify-content: center;
 
   &__box {
-    color: #C4C4C4;
+    color: #c4c4c4;
     @include font(16px, 300);
     display: flex;
     gap: 15px;
@@ -797,7 +792,7 @@ img {
   &__input {
     width: 44px;
     height: 25px;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #eaeaea;
     text-align: center;
   }
 
@@ -832,10 +827,10 @@ img {
   }
 
   &__adress input {
-    border: 1px solid #A4A4A4;
+    border: 1px solid #a4a4a4;
     height: 45px;
     width: 360px;
-    color: #B1B1B1;
+    color: #b1b1b1;
     padding-left: 17px;
     @include font(13px, 300);
     cursor: pointer;
@@ -848,9 +843,9 @@ img {
 
   &__btn {
     height: 35px;
-    border: 1px solid #A4A4A4;
+    border: 1px solid #a4a4a4;
     padding: 11px 15px;
-    color: #4A4A4A;
+    color: #4a4a4a;
     @include font(11px, 300);
     background: none;
     cursor: pointer;
@@ -869,12 +864,11 @@ img {
   &__sum {
     width: 360px;
     height: 214px;
-    background-color: #F5F3F3;
+    background-color: #f5f3f3;
     padding: 39px 34px 42px 44px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
   }
 
   &__sub {
@@ -882,7 +876,7 @@ img {
     gap: 20px;
 
     & p {
-      color: #4A4A4A;
+      color: #4a4a4a;
       @include font(11px, 400);
     }
   }
@@ -905,7 +899,7 @@ img {
 
   &__btn-border {
     padding-top: 17px;
-    border-top: 1px solid #E2E2E2;
+    border-top: 1px solid #e2e2e2;
   }
 
   &__checkout {
@@ -924,7 +918,7 @@ img {
 }
 
 #select-colortext {
-  color: #B1B1B1;
+  color: #b1b1b1;
 }
 
 // registration
@@ -967,9 +961,8 @@ img {
     @include font(11px, 300);
   }
 
-
   &__example {
-    color: #B1B1B1;
+    color: #b1b1b1;
     @include font(13px, 300);
   }
 }
@@ -995,7 +988,7 @@ img {
 
   &__li {
     @include font(24px, 300);
-    list-style-image: url('./img/check_mark.svg');
+    list-style-image: url("./img/check_mark.svg");
     margin-left: 30px;
     margin-bottom: 16px;
     padding-left: 23px;
@@ -1182,6 +1175,7 @@ img {
 
   .choose {
     gap: 0;
+    width: 768px !important;
 
     &__btn {
       margin: 48px auto 64px;
@@ -1205,6 +1199,14 @@ img {
     &__item {
       width: 734px;
     }
+
+    &__content {
+      margin-right: 131px;
+    }
+
+    &__choose {
+      gap: 48px;
+    }
   }
 
   .order {
@@ -1216,7 +1218,7 @@ img {
 
     &__btn {
       margin-bottom: 0;
-      @include font(14px, 300);
+      @include font(11px, 300);
 
       &_choose {
         width: 235px;
@@ -1247,22 +1249,15 @@ img {
   }
 
   .loyal {
-
     &__heading {
       @include font(16px, 300);
     }
 
     &__li {
       @include font(16px, 300);
-
     }
   }
-
-
-
 }
-
-
 
 @media (max-width: 767px) {
   .contener {
@@ -1351,7 +1346,7 @@ img {
   }
 
   .second__container {
-    width: 343px;
+    width: 358px;
     gap: 16px;
     justify-content: center;
   }
@@ -1397,6 +1392,7 @@ img {
   }
 
   .btn {
+    margin-top: 0;
     margin-bottom: 96px;
   }
 
@@ -1444,13 +1440,172 @@ img {
   .footer-style {
     height: 143px;
     display: flex;
-    align-items: flex-end;
-    padding-bottom: 9px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    padding-bottom: 24px;
+    gap: 25px;
   }
 
-  .footer-style__reverse {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 40px;
+  // catalog
+
+  .nav-style {
+    &__content {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  .filter {
+    &__hidden {
+      display: none;
+    }
+
+    & svg {
+      width: 38px;
+      height: 25px;
+    }
+
+    &[open] {
+      left: -180px;
+    }
+  }
+
+  .sort {
+    left: 105px;
+    gap: 24px;
+    &__content {
+      @include font(12px, 400);
+      gap: 9px;
+    }
+  }
+
+  .card__hidden {
+    display: none;
+  }
+
+  // product
+
+  .choose {
+    width: 375px !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 0;
+
+    &__details-content {
+      @include font(10px, 400);
+    }
+
+    &__div2 {
+      width: 175px;
+      margin-top: 32px;
+      margin-bottom: 50px;
+    }
+
+    &__btn {
+      margin-top: 64px;
+      margin-bottom: 64px;
+    }
+  }
+
+  .product-card {
+    margin: 64px auto;
+  }
+
+  .card {
+    &__hidden {
+      display: none;
+    }
+  }
+
+  // card
+
+  .cart {
+    width: 358px;
+    margin-top: 39px;
+    gap: 32px;
+
+    &__item {
+      width: 358px;
+      height: 188px;
+
+      & img {
+        width: 143px;
+      }
+    }
+
+    &__content {
+      margin-top: 13px;
+      margin-left: 17px;
+      margin-right: 21px;
+    }
+
+    &__head {
+      @include font(16px, 400);
+      width: 144px;
+      margin-bottom: 26px;
+    }
+
+    &__desc {
+      @include font(14px, 400);
+    }
+
+    &__input {
+      width: 24px;
+      height: 15px;
+      margin-left: 15px;
+    }
+
+    &__close {
+      margin-top: 17px;
+      width: 10px;
+      height: 11px;
+    }
+
+    &__choose {
+      margin-top: 0;
+      gap: 9px;
+    }
+  }
+
+  .order {
+    margin-top: 0;
+
+    &__btn {
+      margin-bottom: 32px;
+      &_choose {
+        width: 175px;
+        height: 33px;
+      }
+    }
+
+    &__sum {
+      margin-bottom: 96px;
+    }
+  }
+
+  // registration
+
+  .registration {
+    width: 358px;
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .loyal {
+    margin-bottom: 80px;
+    &__heading {
+      @include font(16px, 300);
+    }
+
+    &__li {
+      @include font(16px, 300);
+    }
+  }
+
+  .btn_reg {
+    margin: 39px 0 40px;
   }
 }
